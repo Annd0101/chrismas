@@ -1,0 +1,19 @@
+body {
+  font-family: "poppins";
+}
+.bg-grey {
+  background-color: #e5e9ee !important;
+}
+.bg-chrismas {
+  background-color: #cf6a6d;
+}
+.section-title {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.section-title {
+  background-image: url(/assets/images/section-title-bg.png);
+}
+.chrismas {
+  background-image: url(/assets/images/bg/testimonial.png);
+}
