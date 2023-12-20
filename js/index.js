@@ -5,7 +5,7 @@ function hoverEffect(element) {
 }
 
 // hover c2
-// Select all elements button learn and shop now
+// Select all elements button "Learn" and "Shop now"
 var Elements = document.querySelectorAll(".hover");
 
 Elements.forEach(function (element) {
@@ -25,7 +25,7 @@ Elements.forEach(function (element) {
   });
 });
 
-// Select all elements heart
+// Hover all heart elements
 var hearts = document.querySelectorAll(".heart");
 
 hearts.forEach(function (element) {
@@ -42,7 +42,7 @@ hearts.forEach(function (element) {
   });
 });
 
-// Select all elements add to cart
+// Hover all add to card buttons
 var addToCartBtns = document.querySelectorAll(".add");
 
 addToCartBtns.forEach(function (element) {
@@ -59,14 +59,14 @@ addToCartBtns.forEach(function (element) {
   });
 });
 
-// Select all elements cart title
+// Hover all product titles
 var productTitles = document.querySelectorAll(".title");
 
 productTitles.forEach(function (element) {
   // Add an event listener for the 'mouseover' event
   element.addEventListener("mouseover", function () {
     element.classList.remove("text-danger");
-    element.style.color = "#83a931";
+    element.classList.add("text-success");
   });
   // Add an event listener for the 'mouseout' event
   element.addEventListener("mouseout", function () {
@@ -75,15 +75,25 @@ productTitles.forEach(function (element) {
   });
 });
 
-// check login
+// Authentication
 const user = document.querySelector(".user");
 const bag = document.querySelector(".bag");
 const login = document.querySelector(".login");
 const register = document.querySelector(".register");
+const logout = document.querySelector(".logout");
 const check = localStorage.getItem("user");
 if (check) {
   login.classList.add("d-none");
   register.classList.add("d-none");
   user.classList.remove("d-none");
   bag.classList.remove("d-none");
+  logout.classList.remove("d-none");
 }
+logout.addEventListener("click", () => {
+  localStorage.clear();
+  login.classList.remove("d-none");
+  register.classList.remove("d-none");
+  user.classList.add("d-none");
+  bag.classList.add("d-none");
+  location.reload();
+});

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Holiday Candle",
+    "price": 38,
+    "category": "Sweet",
+    "image": "./assets/images/product/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Christmas Tree",
+    "price": 38,
+    "category": "Decoration",
+    "image": "./assets/images/product/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Santa Claus Doll",
+    "price": 38,
+    "category": "Toys",
+    "image": "./assets/images/product/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Holiday Cap",
+    "price": 200,
+    "category": "Decoration",
+    "image": "./assets/images/product/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": " Holiday Doll",
+    "price": 300,
+    "category": "Toys",
+    "image": "./assets/images/product/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": " Holiday Candle",
+    "price": 200,
+    "category": "Sweet",
+    "image": "./assets/images/product/6.jpg"
+  }
+]
