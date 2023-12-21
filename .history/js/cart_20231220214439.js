@@ -76,7 +76,7 @@ const addCartToHTML = () => {
 
 
             `;
-            newItem2.innerHTML = `<div class="w-100"> <h5 class="text-uppercase">${info.name}</h5>
+            newItem2.innerHTML = `<div class="w-100"> <h5 class="text-uppercase col-8">${info.name}</h5>
             <h5>$${info.price * item.quantity}</h5> </div>`
     });
   }

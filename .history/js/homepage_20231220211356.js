@@ -57,7 +57,6 @@ const addDataToHTML = () => {
     localStorage.setItem("products", JSON.stringify(products));
   }
 };
-let badge = document.querySelector('.badge')
 listProductHTML.addEventListener("click", (event) => {
   let positionClick = event.target;
   if (positionClick.classList.contains("addCart")) {
@@ -67,7 +66,6 @@ listProductHTML.addEventListener("click", (event) => {
         .dataset.id;
     addToCart(id_product);
     alert('Add to cart successfully')
-    badge.innerHTML = cart.length
   }
 });
 const checked = JSON.parse(localStorage.getItem("cart"));
@@ -110,5 +108,10 @@ const initApp = () => {
       products = data;
       addDataToHTML();
     });
+      // get data cart from memory
+      if(localStorage.getItem('cart')){
+        cart = JSON.parse(localStorage.getItem('cart'));
+        addCartToHTML();
+    }
 };
 initApp();

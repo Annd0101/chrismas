@@ -1,18 +1,15 @@
 // display cart that has been added
 let listCartHTML = document.querySelector(".listCart");
-let summaryHTML = document.querySelector('.summary')
 let cart = JSON.parse(localStorage.getItem("cart"));
 let products = JSON.parse(localStorage.getItem("products"));
 console.log(products);
 console.log(cart);
 const addCartToHTML = () => {
   listCartHTML.innerHTML = "";
-  summaryHTML.innerHTML = ""
   let totalQuantity = 0;
   if (cart.length > 0) {
     cart.forEach((item) => {
       totalQuantity = totalQuantity + item.quantity;
-     
       let newItem = document.createElement("div");
       newItem.classList.add("item");
       newItem.dataset.id = item.product_id;
@@ -20,11 +17,7 @@ const addCartToHTML = () => {
         (value) => value.id == item.product_id
       );
       let info = products[positionProduct];
-      let newItem2 = document.createElement("div");
-      newItem2.classList.add("item");
-      newItem2.dataset.id = item.product_id;
       listCartHTML.appendChild(newItem);
-      summaryHTML.appendChild(newItem2)
       newItem.innerHTML = `
 
 
@@ -76,8 +69,6 @@ const addCartToHTML = () => {
 
 
             `;
-            newItem2.innerHTML = `<div class="w-100"> <h5 class="text-uppercase">${info.name}</h5>
-            <h5>$${info.price * item.quantity}</h5> </div>`
     });
   }
 };
@@ -115,5 +106,5 @@ const changeQuantityCart = (product_id, type) => {
       }
   }
   addCartToHTML();
-  localStorage.setItem("cart", JSON.stringify(cart));
+  addCartToMemory();
 }

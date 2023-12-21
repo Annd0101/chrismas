@@ -7,12 +7,12 @@ console.log(products);
 console.log(cart);
 const addCartToHTML = () => {
   listCartHTML.innerHTML = "";
-  summaryHTML.innerHTML = ""
   let totalQuantity = 0;
   if (cart.length > 0) {
     cart.forEach((item) => {
       totalQuantity = totalQuantity + item.quantity;
-     
+      // <h5 class="text-uppercase">items 3</h5>
+      //                   <h5>€ 132.00</h5>
       let newItem = document.createElement("div");
       newItem.classList.add("item");
       newItem.dataset.id = item.product_id;
@@ -20,11 +20,7 @@ const addCartToHTML = () => {
         (value) => value.id == item.product_id
       );
       let info = products[positionProduct];
-      let newItem2 = document.createElement("div");
-      newItem2.classList.add("item");
-      newItem2.dataset.id = item.product_id;
       listCartHTML.appendChild(newItem);
-      summaryHTML.appendChild(newItem2)
       newItem.innerHTML = `
 
 
@@ -76,8 +72,6 @@ const addCartToHTML = () => {
 
 
             `;
-            newItem2.innerHTML = `<div class="w-100"> <h5 class="text-uppercase">${info.name}</h5>
-            <h5>$${info.price * item.quantity}</h5> </div>`
     });
   }
 };

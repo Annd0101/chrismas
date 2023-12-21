@@ -67,7 +67,7 @@ listProductHTML.addEventListener("click", (event) => {
         .dataset.id;
     addToCart(id_product);
     alert('Add to cart successfully')
-    badge.innerHTML = cart.length
+    badge.innerHTML = cart.length-1
   }
 });
 const checked = JSON.parse(localStorage.getItem("cart"));

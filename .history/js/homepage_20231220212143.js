@@ -57,7 +57,6 @@ const addDataToHTML = () => {
     localStorage.setItem("products", JSON.stringify(products));
   }
 };
-let badge = document.querySelector('.badge')
 listProductHTML.addEventListener("click", (event) => {
   let positionClick = event.target;
   if (positionClick.classList.contains("addCart")) {
@@ -76,6 +75,7 @@ if (!checked) {
   localStorage.setItem("cart", JSON.stringify([]));
 }
 let cart = JSON.parse(localStorage.getItem("cart"));
+let badge = document.querySelector('.badge')
 const addToCart = (product_id) => {
   let positionThisProductInCart = cart.findIndex(
     (value) => value.product_id == product_id

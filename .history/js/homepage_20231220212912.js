@@ -67,7 +67,13 @@ listProductHTML.addEventListener("click", (event) => {
         .dataset.id;
     addToCart(id_product);
     alert('Add to cart successfully')
-    badge.innerHTML = cart.length
+    var totalItems = 0;
+    for (var cartId in cart) {
+        totalItems += cart[cartId].items.length;
+    }
+
+    // Cập nhật giá trị badge
+    document.querySelector('.badge').innerText = totalItems.toString();
   }
 });
 const checked = JSON.parse(localStorage.getItem("cart"));
