@@ -13,6 +13,7 @@
 
     <!-- main script -->
     <script src="./js/index.js" defer></script>
+      <script src="./js/homepage.js" defer></script>
     <!-- bootstrap -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <!-- font awesome -->
@@ -71,8 +72,8 @@
                       <a
                         href="./login.html"
                         class="nav-link text-secondary p-0"
-                        onmouseover="hoverEffect(this)"
-                        onmouseout="hoverEffect(this)"
+                        
+                       
                       >
                         Login
                       </a>
@@ -83,8 +84,8 @@
                       <a
                         href="./register.html"
                         class="nav-link text-secondary p-0"
-                        onmouseover="hoverEffect(this)"
-                        onmouseout="hoverEffect(this)"
+                        
+                       
                       >
                         Register
                       </a>
@@ -95,8 +96,8 @@
                       <a
                         href="./demo.html"
                         class="nav-link text-secondary p-0"
-                        onmouseover="hoverEffect(this)"
-                        onmouseout="hoverEffect(this)"
+                        
+                       
                       >
                         <i class="fa-regular fa-user "></i>
                         My Account
@@ -106,19 +107,25 @@
                       class="nav-item d-flex align-items-center bag d-none hvr-grow"
                     >
                       <a
-                        href="./checkout.html"
+                        href="./cart.html"
                         class="nav-link text-secondary me-2 position-relative"
                       >
                         <i
                           class="fas fa-shopping-cart"
-                          onmouseover="hoverEffect(this)"
-                          onmouseout="hoverEffect(this)"
+                          
+                         
                         ></i>
                         <span
                           class="position-absolute top-0 start-100 translate-middle badge bg-danger rounded-pill"
                         >
                           3
                         </span>
+                      </a>
+                    </li>
+                      <li class="nav-item d-flex align-items-center logout d-none hvr-grow">
+                      <a class="nav-link text-secondary me-2 position-relative" >
+                        <i class="fa-solid fa-right-from-bracket" >
+                        </i>
                       </a>
                     </li>
                   </ul>
@@ -150,21 +157,21 @@
               <ul class="navbar-nav">
                 <li class="nav-item text-secondary fw-bold me-4 hvr-grow">
                   <a
-                    class="nav-link active text-danger"
+                    class="nav-link text-secondary"
                     aria-current="page"
                     href="./index.html"
-                    onmouseover="hoverEffect(this)"
-                    onmouseout="hoverEffect(this)"
+                    
+                   
                   >
                     Home
                   </a>
                 </li>
-                <li class="nav-item text-secondary fw-bold me-4 hvr-grow">
+                <li class="nav-item active  fw-bold me-4 hvr-grow">
                   <a
-                    class="nav-link"
+                    class="nav-link text-danger"
                     href="#"
-                    onmouseover="hoverEffect(this)"
-                    onmouseout="hoverEffect(this)"
+                    
+                   
                   >
                     Shop
                   </a>
@@ -173,8 +180,8 @@
                   <a
                     class="nav-link"
                     href="./demo.html"
-                    onmouseover="hoverEffect(this)"
-                    onmouseout="hoverEffect(this)"
+                    
+                   
                   >
                     About
                   </a>
@@ -183,8 +190,8 @@
                   <a
                     class="nav-link"
                     href="./cart.html"
-                    onmouseover="hoverEffect(this)"
-                    onmouseout="hoverEffect(this)"
+                    
+                   
                   >
                     Pages
                   </a>
@@ -193,8 +200,8 @@
                   <a
                     class="nav-link"
                     href="./demo.html"
-                    onmouseover="hoverEffect(this)"
-                    onmouseout="hoverEffect(this)"
+                    
+                   
                   >
                     Blog
                   </a>
@@ -203,8 +210,8 @@
                   <a
                     class="nav-link"
                     href="./demo.html"
-                    onmouseover="hoverEffect(this)"
-                    onmouseout="hoverEffect(this)"
+                    
+                   
                   >
                     Contact
                   </a>
@@ -243,230 +250,8 @@
       <!-- Product Section Start-->
       <div class="christmas">
         <div class="container my-5">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col animate__animated animate__fadeInLeft">
-              <div class="card h-100">
-                <a href="./productDetail.html">
-                  <img
-                    src="./assets/images/product/1.jpg"
-                    class="card-img-top position-relative"
-                    alt="product 1"
-                  />
-                </a>
-                <div
-                  class="position-absolute d-flex justify-content-between align-items-center w-100 "
-                >
-                  <a href="./wishlist.html" class="ms-3 mt-4">
-                    <!-- hover via class heart -->
-                    <i
-                      class="far fa-heart bg-danger p-3 rounded-circle text-white heart hvr-grow"
-                    ></i>
-                  </a>
-                  <span class="me-3 mt-4 text-success hvr-grow fs-5" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">New</span>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <a href="./productDetail.html" class="text-decoration-none">
-                      <!-- hover via class title -->
-                      <h4 class="card-title text-danger fw-bold title hvr-grow">
-                        Holiday Candle
-                      </h4>
-                    </a>
-                    <span class="fw-bold fs-4">$38</span>
-                  </div>
-                  <p class="card-text text-start">Catalog</p>
-                  <!-- hover via class add -->
-                  <button
-                    class="btn btn-outline-secondary text-white bg-success d-flex add hvr-grow"
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col animate__animated animate__fadeInUp">
-              <div class="card h-100">
-                <a href="./productDetail.html">
-                  <img
-                    src="./assets/images/product/2.jpg"
-                    class="card-img-top"
-                    alt="product 2"
-                  />
-                </a>
-                <div
-                  class="position-absolute d-flex justify-content-between align-items-center w-100 "
-                >
-                  <a href="./wishlist.html" class="ms-3 mt-4">
-                    <i
-                      class="far fa-heart bg-danger p-3 rounded-circle text-white heart hvr-grow"
-                    ></i>
-                  </a>
-                  <span class="me-3 mt-4 text-success hvr-grow fs-5" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">New</span>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <a href="./productDetail.html" class="text-decoration-none">
-                      <h4 class="card-title text-danger fw-bold title hvr-grow">
-                        Christmas Tree
-                      </h4>
-                    </a>
-                    <span class="fw-bold fs-4">$38</span>
-                  </div>
-                  <p class="card-text text-start">Catalog</p>
-                  <button
-                    class="btn btn-outline-secondary text-white bg-success d-flex add hvr-grow"
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col animate__animated animate__fadeInRight">
-              <div class="card h-100">
-                <a href="./productDetail.html">
-                  <img
-                    src="./assets/images/product/3.jpg"
-                    class="card-img-top"
-                    alt="product 3"
-                  />
-                </a>
-                <div
-                  class="position-absolute d-flex justify-content-between align-items-center w-100 "
-                >
-                  <a href="./wishlist.html" class="ms-3 mt-4">
-                    <i
-                      class="far fa-heart bg-danger p-3 rounded-circle text-white heart hvr-grow"
-                    ></i>
-                  </a>
-                  <span class="me-3 mt-4 text-success hvr-grow fs-5" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">New</span>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <a href="./productDetail.html" class="text-decoration-none">
-                      <h4 class="card-title text-danger fw-bold title hvr-grow">
-                        Santa Claus Doll
-                      </h4>
-                    </a>
-                    <span class="fw-bold fs-4">$38</span>
-                  </div>
-                  <p class="card-text text-start">Catalog</p>
-                  <button
-                    class="btn btn-outline-secondary text-white bg-success d-flex add hvr-grow"
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col animate__animated animate__fadeInLeft">
-              <div class="card h-100">
-                <a href="./productDetail.html">
-                  <img
-                    src="./assets/images/product/4.jpg"
-                    class="card-img-top"
-                    alt="product 4"
-                  />
-                </a>
-                <div
-                  class="position-absolute d-flex justify-content-between align-items-center w-100 "
-                >
-                  <a href="./wishlist.html" class="ms-3 mt-4">
-                    <i
-                      class="far fa-heart bg-danger p-3 rounded-circle text-white heart hvr-grow"
-                    ></i>
-                  </a>
-                  <span class="me-3 mt-4 text-success hvr-grow fs-5" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">New</span>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <a href="./productDetail.html" class="text-decoration-none">
-                      <h4 class="card-title text-danger fw-bold title hvr-grow">Holiday Cap</h4>
-                    </a>
-                    <span class="fw-bold fs-4">$38</span>
-                  </div>
-                  <p class="card-text text-start">Catalog</p>
-                  <button
-                    class="btn btn-outline-secondary text-white bg-success d-flex add hvr-grow"
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col animate__animated animate__fadeInUp">
-              <div class="card h-100">
-                <a href="./productDetail.html">
-                  <img
-                    src="./assets/images/product/5.jpg"
-                    class="card-img-top"
-                    alt="product 5"
-                  />
-                </a>
-                <div
-                  class="position-absolute d-flex justify-content-between align-items-center w-100 "
-                >
-                  <a href="./wishlist.html" class="ms-3 mt-4">
-                    <i
-                      class="far fa-heart bg-danger p-3 rounded-circle text-white heart hvr-grow"
-                    ></i>
-                  </a>
-                  <span class="me-3 mt-4 text-success hvr-grow fs-5" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">New</span>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <a href="./productDetail.html" class="text-decoration-none">
-                      <h4 class="card-title text-danger fw-bold title hvr-grow">
-                        Holiday Doll
-                      </h4>
-                    </a>
-                    <span class="fw-bold fs-4">$38</span>
-                  </div>
-                  <p class="card-text text-start">Catalog</p>
-                  <button
-                    class="btn btn-outline-secondary text-white bg-success d-flex add hvr-grow"
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col animate__animated animate__fadeInRight">
-              <div class="card h-100">
-                <a href="./productDetail.html">
-                  <img
-                    src="./assets/images/product/6.jpg"
-                    class="card-img-top"
-                    alt="product 6"
-                  />
-                </a>
-                <div
-                  class="position-absolute d-flex justify-content-between align-items-center w-100 "
-                >
-                  <a href="./wishlist.html" class="ms-3 mt-4">
-                    <i
-                      class="far fa-heart bg-danger p-3 rounded-circle text-white heart hvr-grow"
-                    ></i>
-                  </a>
-                  <span class="me-3 mt-4 text-success hvr-grow fs-5" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">New</span>
-                </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <a href="./productDetail.html" class="text-decoration-none">
-                      <h4 class="card-title text-danger fw-bold title hvr-grow">
-                        Holiday Candle
-                      </h4>
-                    </a>
-                    <span class="fw-bold fs-4">$38</span>
-                  </div>
-                  <p class="card-text text-start">Catalog</p>
-                  <button
-                    class="btn btn-outline-secondary text-white bg-success d-flex add hvr-grow"
-                  >
-                    Add to cart
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 listProduct">
+
           </div>
         </div>
       </div>
@@ -499,19 +284,19 @@
   
         <ul class="nav col-md-4 justify-content-md-end col-12 justify-content-center">
           <li class="nav-item">
-            <a href="./demo.html" class="nav-link px-2 text-secondary" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">Home</a>
+            <a href="./demo.html" class="nav-link px-2 text-secondary">Home</a>
           </li>
           <li class="nav-item">
-            <a href="./demo.html" class="nav-link px-2 text-secondary" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">Features</a>
+            <a href="./demo.html" class="nav-link px-2 text-secondary">Features</a>
           </li>
           <li class="nav-item">
-            <a href="./demo.html" class="nav-link px-2 text-secondary" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">Pricing</a>
+            <a href="./demo.html" class="nav-link px-2 text-secondary">Pricing</a>
           </li>
           <li class="nav-item">
-            <a href="./demo.html" class="nav-link px-2 text-secondary" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">FAQs</a>
+            <a href="./demo.html" class="nav-link px-2 text-secondary">FAQs</a>
           </li>
           <li class="nav-item">
-            <a href="./demo.html" class="nav-link px-2 text-secondary" onmouseover="hoverEffect(this)" onmouseout="hoverEffect(this)">About</a>
+            <a href="./demo.html" class="nav-link px-2 text-secondary">About</a>
           </li>
         </ul>
     </footer>

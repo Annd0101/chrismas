@@ -1,10 +1,22 @@
-// hover c1
-function hoverEffect(element) {
-  console.log(element);
-  element.classList.toggle("text-danger");
-}
+// Select all elements nav-link
+var navlinks = document.querySelectorAll(".nav-link");
 
-// hover c2
+navlinks.forEach(function (element) {
+  // Add an event listener for the 'mouseover' event
+  if (!element.classList.contains("text-danger"))
+    element.addEventListener("mouseover", function () {
+      element.classList.remove("text-secondary");
+      element.classList.add("text-danger");
+    });
+
+  // Add an event listener for the 'mouseout' event
+  element.addEventListener("mouseout", function () {
+    // Revert the color to its original state on mouseout
+    element.classList.remove("text-danger");
+    element.classList.add("text-secondary");
+  });
+});
+
 // Select all elements button "Learn" and "Shop now"
 var Elements = document.querySelectorAll(".hover");
 

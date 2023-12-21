@@ -57,7 +57,7 @@ const addDataToHTML = () => {
     localStorage.setItem("products", JSON.stringify(products));
   }
 };
-let badge = document.querySelector('.badge')
+let badge = document.querySelector(".badge");
 listProductHTML.addEventListener("click", (event) => {
   let positionClick = event.target;
   if (positionClick.classList.contains("addCart")) {
@@ -66,8 +66,8 @@ listProductHTML.addEventListener("click", (event) => {
       positionClick.parentElement.parentElement.parentElement.parentElement
         .dataset.id;
     addToCart(id_product);
-    alert('Add to cart successfully')
-    badge.innerHTML = cart.length
+    alert("Add to cart successfully");
+    badge.innerHTML = cart.length;
   }
 });
 const checked = JSON.parse(localStorage.getItem("cart"));
@@ -76,6 +76,7 @@ if (!checked) {
   localStorage.setItem("cart", JSON.stringify([]));
 }
 let cart = JSON.parse(localStorage.getItem("cart"));
+badge.innerHTML = cart.length;
 const addToCart = (product_id) => {
   let positionThisProductInCart = cart.findIndex(
     (value) => value.product_id == product_id
