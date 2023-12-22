@@ -142,7 +142,7 @@
                   <a class="nav-link" href="./cart.html">Pages</a>
                 </li>
                 <li class="nav-item text-secondary fw-bold me-4 hvr-grow">
-                  <a class="nav-link" href="./demo.html">Blog</a>
+                  <a class="nav-link" href="./blogDetail.html">Blog</a>
                 </li>
                 <li class="nav-item text-secondary fw-bold me-4 hvr-grow">
                   <a class="nav-link" href="./demo.html">Contact</a>
@@ -209,5 +209,8 @@
     </ul>
   </footer>
   <script src="./js/bootstrap.bundle.min.js"></script>
+  <script> let badge = document.querySelector(".badge");
+       let cart = JSON.parse(localStorage.getItem("cart"));
+         badge.innerHTML = cart.length;</script>
   </body>
 </html>
