@@ -84,9 +84,10 @@ const addDataToHTML = () => {
 
 // click add to cart
 let badge = document.querySelector(".badge");
+let person = JSON.parse(localStorage.getItem("user"));
 listProductHTML.addEventListener("click", (event) => {
   let positionClick = event.target;
-  if (positionClick.classList.contains("addCart")) {
+  if (positionClick.classList.contains("addCart") && person) {
     // get product id
     let id_product =
       positionClick.parentElement.parentElement.parentElement.parentElement
@@ -94,6 +95,8 @@ listProductHTML.addEventListener("click", (event) => {
     addToCart(id_product);
     alert("Add to cart successfully");
     badge.innerHTML = cart.length;
+  } else {
+    alert("Please log in !");
   }
 });
 
@@ -107,7 +110,6 @@ if (!checked) {
 // if cart was created before, pass the badge data to user
 let cart = JSON.parse(localStorage.getItem("cart"));
 badge.innerHTML = cart.length;
-
 const addToCart = (product_id) => {
   let positionThisProductInCart = cart.findIndex(
     (value) => value.product_id == product_id
