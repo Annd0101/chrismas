@@ -36,7 +36,7 @@ const addDataToHTML = () => {
       let newProduct = document.createElement("div");
       newProduct.dataset.id = product.id;
       newProduct.classList.add("item");
-      newProduct.innerHTML = `            <div class="col animate__animated animate__fadeInLeft">
+      newProduct.innerHTML = `<div class="col animate__animated animate__fadeInLeft">
               <div class="card h-100">
                 <a href="./productDetail.html">
                   <img
@@ -95,7 +95,8 @@ listProductHTML.addEventListener("click", (event) => {
     addToCart(id_product);
     alert("Add to cart successfully");
     badge.innerHTML = cart.length;
-  } else {
+  } else if (!person) {
+    event.preventDefault();
     alert("Please log in !");
   }
 });

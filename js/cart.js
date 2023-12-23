@@ -137,7 +137,6 @@ const addCartToHTML = () => {
     }
   }
 };
-
 addCartToHTML();
 
 listCartHTML.addEventListener("click", (event) => {
